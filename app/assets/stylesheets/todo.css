@@ -89,8 +89,16 @@ body{
     margin-left: 20px;
     font-size: 15px;
 }
-.TodoItem-delete:hover{
+
+.TodoItem-delete{
+    display: none;
     height: 15px;
     width: 15px;
     margin-left: 20px;
+}
+
+.TodoItem-container:hover + .TodoItem-delete{
+    display: flex;
+    padding: 5px;
+    align-items: center;
 }
