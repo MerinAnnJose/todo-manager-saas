@@ -96,7 +96,5 @@ body{
 }
 
 .TodoItem-container:hover + .TodoItem-delete{
-    display: flex;
-    padding: 5px;
-    align-items: center;
+    display: block;
 }
