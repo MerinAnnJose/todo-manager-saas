@@ -89,7 +89,7 @@ body{
     margin-left: 20px;
     font-size: 15px;
 }
-.TodoItem-delete{
+.TodoItem-delete:hover{
     height: 15px;
     width: 15px;
     margin-left: 20px;
