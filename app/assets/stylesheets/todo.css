@@ -1,14 +1,14 @@
 body{
     font-family: sans-serif;
+    color: #453C52;
     max-width: 600px;
     margin: 0 auto;
     margin-top: 60px;
 }
 
 .TodoTitle{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
-    color: #0b016b;
     margin-bottom: 20px;
 }
 
@@ -18,34 +18,43 @@ body{
 }
 
 .InputText{
-    height: 28px;
-    width: 200px;
-    border-radius: 20px;
-    border: 2px solid #0314b3;
-    padding: 5px;
-}
-.InputDate{
-    height: 30px;
-    width: 200px;
-    border-radius: 20px;
-    border: 2px solid #0314b3;
-    padding: 5px;
-}
-.AddButton{
-    font-weight: bold;
+    background: #FFFFFF;
+    border: 1px solid #BFB8CC;
+    border-radius: 4px;
+    border-radius: 4px;
+    width: 190px;
+    height: 32px;
+    font-family: OpenSans;
     font-size: 15px;
-    height: 50px;
-    width: 70px;
-    border-radius: 20px;
-    background-color: #4CAF50;
-    border: 2px solid #4CAF50;
-    padding: 5px;
-}
-.AddButton:hover{
-    /*background-color: #0014c9;*/
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: #726A7E;
+    letter-spacing: 0.1px;
 }
 
+.InputDate{
+    background: #FFFFFF;
+    border: 1px solid #BFB8CC;
+    border-radius: 4px;
+    border-radius: 4px;
+    width: 165px;
+    height: 32px;
+    font-family: OpenSans;
+    font-size: 15px;
+    color: #726A7E;
+    letter-spacing: 0.1px;
+}
+
+.AddButton{
+    background: #48BB78;
+    border-radius: 4px;
+    border-radius: 4px;
+    border-color: #48BB78;
+    width: 72px;
+    height: 32px;
+    font-family: OpenSans-Semibold;
+    font-size: 15px;
+    color: #ffffff;
+    letter-spacing: 0.1px;
+}
 
 .TodoSection{
     margin-top: 20px;
@@ -55,46 +64,47 @@ body{
     display: flex;
     padding: 5px;
     align-items: center;
-    align-content: center;
     margin-bottom: 10px;
 }
 .TodoSectionTitle-text{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    color: #0a0347;
     margin-right: 10px;
 }
 .TodoSectionTitle-remainingCount{
-    font-size: 15px;
-    color: #0a0347;
+    font-size: 17px;
 }
 
-.TodoItem{
-    color: #0e027e;
-}
+
 .TodoItem-container{
     display: flex;
+    max-width: 250px;
     padding: 5px;
     align-items: center;
+    font-size: 15px;
 }
 .TodoItem-checkbox{
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     margin-right: 10px;
-}
-.TodoItem-text{
-    font-size: 20px;
 }
 .date_display{
     margin-left: 20px;
     font-size: 15px;
-    margin-right: 20px;
 }
-
-.TodoItem-delete{
-    display: none;
+.TodoItem-delete
+{
+    visibility: hidden;
+    margin-left: 20px;
 }
-
-.TodoItem-container:hover + .TodoItem-delete{
-    display: block;
+.TodoItem-delete > img{
+    width: 15px;
+    height: 15px;
+}
+.TodoItem-container:hover
+{
+    background-color:#F1EDF7;
+}
+.TodoItem-container:hover .TodoItem-delete{
+    visibility: visible;
 }

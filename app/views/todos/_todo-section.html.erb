@@ -12,11 +12,11 @@
                     <p class="TodoItem-text"><%= todo.todo_text %></p>
                     <p class="date_display">
                         <% if date_display %>
-                            <%= todo.due_date %>
+                            <%= todo.due_date.to_s(:short) %>
                         <% end %>
                     </p>
                     <a href="javascript:void(0)" class="TodoItem-delete">
-                        <img src="trashcan.png" height="15" weight="15">
+                        <img src="trashcan.png">
                     </a>
                 </label>
             </li>
