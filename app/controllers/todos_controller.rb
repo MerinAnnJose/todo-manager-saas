@@ -11,9 +11,19 @@ class TodosController < ApplicationController
     end
 
     def create
-        todo_text = params[:todo_text]
-        due_date = Date.today + params[:due_date]
-        todo = Todo.create!(todo_text: todo_text, due_date: due_date, completed: false)
-        render plain: todo.to_pleasant_string + " has been created"
+        todo_text = params[:todo_text_input]
+        due_date = DateTime.parse(params[:due_date_input])
+        Todo.create!(todo_text: todo_text, due_date: due_date, completed: false)
+        #render plain: todo.to_pleasant_string + " has been created"
+        redirect_to todos_url
+    end
+
+    def update
+        id = params[:id]
+        completed = params[:completed]
+        todo = Todo.find(id)
+        todo.completed = completed
+        todo.save!
+        redirect_to todos_url
     end
 end

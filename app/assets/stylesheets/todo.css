@@ -92,6 +92,9 @@ body{
     width: 15px;
     margin-right: 10px;
 }
+.TodoItem-text-checked{
+    text-decoration: line-through;
+}
 .date_display{
     margin-left: 20px;
     font-size: 15px;
