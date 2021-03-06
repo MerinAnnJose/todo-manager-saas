@@ -6,12 +6,11 @@
         <h1 class="TodoTitle">My To-Do List</h1>
         <section>
             <div class="AddNewTodo">
-                <form action="/todos" method="POST">
-                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                <%= form_with(url: "/todos", method: "post") do %> 
                     <input class="InputText" type="text" name="todo_text_input" placeholder="What's new?">
                     <input class="InputDate" type="date" name="due_date_input">
                     <button class="AddButton" type="submit">Add</button>
-                </form>
+                <% end %>
             </div>
         </section>
 
