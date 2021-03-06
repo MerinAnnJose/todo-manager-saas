@@ -4,12 +4,6 @@ class TodosController < ApplicationController
         render "index"
     end
 
-    def show
-        id = params[:id]
-        todo = Todo.find(id)
-        render plain: todo.to_pleasant_string
-    end
-
     def create
         todo_text = params[:todo_text_input]
         due_date = DateTime.parse(params[:due_date_input])
@@ -24,6 +18,13 @@ class TodosController < ApplicationController
         todo = Todo.find(id)
         todo.completed = completed
         todo.save!
+        redirect_to todos_url
+    end
+
+    def destroy
+        id = params[:id]
+        todo = Todo.find(id)
+        todo.delete
         redirect_to todos_url
     end
 end
