@@ -16,3 +16,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+.Flash-error{
+    color: darkred;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    font-size: 16px;
+}
