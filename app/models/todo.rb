@@ -1,5 +1,9 @@
 class Todo < ActiveRecord::Base
-    belongs_to :users
+    belongs_to :users, optional: true
+
+    def self.of_user(user)
+        all.where(user_id: user.id)
+    end
 
     def due_today?
         due_date == Date.today

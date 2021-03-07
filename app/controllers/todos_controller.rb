@@ -1,21 +1,25 @@
 class TodosController < ApplicationController
     def index
-        current_user
+        @todos = Todo.of_user(current_user)
         render "index"
     end
 
     def create
         todo_text = params[:todo_text_input]
         due_date = DateTime.parse(params[:due_date_input])
-        Todo.create!(todo_text: todo_text, due_date: due_date, completed: false)
-        #render plain: todo.to_pleasant_string + " has been created"
+        newtodo = Todo.create!(
+            todo_text: todo_text, 
+            due_date: due_date, 
+            completed: false,
+            user_id: current_user.id
+        )
         redirect_to todos_url
     end
 
     def update
         id = params[:id]
         completed = params[:completed]
-        todo = Todo.find(id)
+        todo = Todo.of_user(current_user).find(id)
         todo.completed = completed
         todo.save!
         redirect_to todos_url
@@ -23,7 +27,7 @@ class TodosController < ApplicationController
 
     def destroy
         id = params[:id]
-        todo = Todo.find(id)
+        todo = Todo.of_user(current_user).find(id)
         todo.delete
         redirect_to todos_url
     end
