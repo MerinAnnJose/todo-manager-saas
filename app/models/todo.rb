@@ -1,5 +1,9 @@
 class Todo < ActiveRecord::Base
-    belongs_to :users, optional: true
+    validates :todo_text, presence: true
+    validates :due_date, presence: true
+    validates :todo_text, length: { minimum: 2 }
+
+    belongs_to :user
 
     def self.of_user(user)
         all.where(user_id: user.id)
