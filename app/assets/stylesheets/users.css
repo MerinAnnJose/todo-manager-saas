@@ -1,13 +1,19 @@
 .UsersNew-main{
-    margin-left: 100px;
+    margin: 0 auto;
+    max-width: max-content;
 }
 
 .NewUsers-title{
     margin-bottom: 40px;
     font-size: 28px;
 }
-
 .Form-section{
+    margin-bottom: 30px;
+}
+.Form-section-submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
 }
 

@@ -1,5 +1,5 @@
 <article class="UsersNew-main">
-<p class="NewUsers-title">Welcome back, sign-in!</p>
+<p class="NewUsers-title">Sign-in!</p>
 
 <section class = "UsersNew">
     <%= form_with(url: sessions_path,method: "post") do |form| %>
@@ -13,8 +13,9 @@
             <%= form.password_field :password, class: "Form-input" %>
         </div>
 
-        <div class = "Form-section">
+        <div class = "Form-section-submit">
             <%= form.submit "Sign-In!", class: "Form-submit" %>
+            <%= link_to "Home", "/" %>
         </div>
     <% end %>
 </section>

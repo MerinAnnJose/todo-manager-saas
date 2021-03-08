@@ -12,6 +12,7 @@ skip_before_action :ensure_user_logged_in
             email: params[:email],
             password: params[:password]
         )
+        session[:current_user_id] = user.id
         redirect_to "/"
     end
 end

@@ -1,14 +1,14 @@
 body{
     font-family: sans-serif;
     color: #453C52;
-    max-width: 500px;
+    max-width: max-content;
     margin: 0 auto;
     margin-top: 60px;
 }
 
 .TodoPageMain{
     padding-top: 20px;
-    padding-left: 10px;
+    
 }
 
 .TodoTitle{
@@ -63,7 +63,6 @@ body{
 
 .TodoSection{
     padding-top: 20px;
-    padding-left: 10px;
 }
 .TodoSectionTitle{
     display: flex;

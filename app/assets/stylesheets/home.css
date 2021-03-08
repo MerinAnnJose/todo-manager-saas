@@ -1,3 +1,8 @@
+.Home-main{
+    max-width: max-content;
+    margin: 0 auto;
+}
+
 .Home-title{
     font-size: 20px;
     margin-bottom: 30px;
